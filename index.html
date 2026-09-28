@@ -3,34 +3,221 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-  
-  <!-- Linking CSS File -->
+  <meta name="description" content="Responsive modern landing page built with HTML and CSS.">
+  <title>Modern Landing Page</title>
+
   <link rel="stylesheet" href="index.css">
+
+  <!-- Boxicons CDN CDN link -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <nav>
-      <a href="#" class="logo">MyBrand</a>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <!-- Image Logo from images folder -->
+      <a href="#" class="logo">
+        <img src="images/logo.png" alt="ProdeskiT Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="navbar-actions">
+        <!-- Theme Toggle CTA Button -->
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Toggle dark mode"
+          aria-pressed="false"
+        >
+          <i class='bx bx-moon'></i>
+        </button>
+
+        <!-- Primary CTA Button in Header -->
+        <a href="#contact" class="btn btn-primary nav-cta">Get Started</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <i class='bx bx-menu'></i>
+        </button>
+      </div>
     </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary">Get Started</a>
+    </div>
   </header>
 
   <main>
-    <section id="home">
-      <h1>Welcome to My Website</h1>
-      <p>This is a modern HTML and CSS setup.</p>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">BUILD • LEARN • GROW</p>
+
+        <h1>
+          Build Better Digital
+          <span>Experiences.</span>
+        </h1>
+
+        <p class="hero-text">
+          Create fast, responsive and accessible websites using
+          modern web development fundamentals.
+        </p>
+
+        <!-- Hero CTA Actions with Boxicons -->
+        <div class="hero-actions">
+          <a href="#features" class="btn btn-primary">
+            <i class='bx bx-rocket'></i> Explore Features
+          </a>
+
+          <a href="#about" class="btn btn-secondary">
+            <i class='bx bx-info-circle'></i> Learn More
+          </a>
+        </div>
+      </div>
     </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features section" id="features">
+      <div class="section-heading">
+        <p class="eyebrow">FEATURES</p>
+        <h2>Everything you need to get started</h2>
+        <p>A simple and responsive foundation for your next project.</p>
+      </div>
+
+      <div class="card-grid">
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <i class='bx bx-bolt-circle'></i>
+          </div>
+          <h3>Fast Performance</h3>
+          <p>
+            High-performance HTML and CSS ensure lightning-fast page load speeds, 
+            boosting user retention and improving Google search rankings.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <i class='bx bx-devices'></i>
+          </div>
+          <h3>Responsive Design</h3>
+          <p>
+            The layout adapts smoothly to desktop, tablet, and mobile screen sizes seamlessly.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <i class='bx bx-accessibility'></i>
+          </div>
+          <h3>Accessible</h3>
+          <p>
+            Semantic HTML and keyboard-friendly controls improve accessibility for all users.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about section" id="about">
+      <div class="about-content">
+        <p class="eyebrow">ABOUT</p>
+
+        <h2>Simple engineering. Better experiences.</h2>
+
+        <p>
+          We build high-quality web templates focused on performance, accessibility, and modern aesthetics.
+        </p>
+
+        <!-- About CTA Button -->
+        <a href="#contact" class="btn btn-secondary">
+          <i class='bx bx-paper-plane'></i> Get in Touch
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT / FINAL CTA SECTION -->
+    <section class="contact section" id="contact">
+      <div class="contact-box">
+        <p class="eyebrow">GET STARTED</p>
+
+        <h2>Ready to build something?</h2>
+
+        <p>Start with a clean foundation and improve it step by step.</p>
+
+        <!-- Contact CTA Buttons -->
+        <div class="cta-group">
+          <a href="mailto:hello@example.com" class="btn btn-primary">
+            <i class='bx bx-envelope'></i> Contact Us
+          </a>
+          <a href="#" class="btn btn-secondary">
+            <i class='bx bx-download'></i> Download Template
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2026 MyBrand. All rights reserved.</p>
+  <footer class="footer">
+    <p>© 2026 ProdeskiT. All rights reserved.</p>
   </footer>
 
+  <script>
+    // Dark/Light Theme Toggle with Boxicons
+    const themeToggle = document.getElementById("themeToggle");
+
+    themeToggle.addEventListener("click", () => {
+      const isDark = document.body.classList.toggle("dark");
+      themeToggle.setAttribute("aria-pressed", isDark);
+      
+      themeToggle.innerHTML = isDark 
+        ? "<i class='bx bx-sun'></i>" 
+        : "<i class='bx bx-moon'></i>";
+    });
+
+    // Mobile Navigation Toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuIcon = menuToggle.querySelector("i");
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuIcon.classList.remove("bx-x");
+      menuIcon.classList.add("bx-menu");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuIcon.classList.toggle("bx-menu", !isOpen);
+      menuIcon.classList.toggle("bx-x", isOpen);
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+  </script>
 </body>
 </html>
