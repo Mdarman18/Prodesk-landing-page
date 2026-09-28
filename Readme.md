@@ -77,7 +77,24 @@ Or run a local server (optional):
 # Or with Node.js
 npx serve .
 ```
+Performance
 
+Performance was an important part of this project. I tested the deployed website using Google Lighthouse and optimized the page for loading speed, accessibility, best practices, and SEO.
+
+Lighthouse Performance Report :- ![Performanace review page](./image/prodesk.PNG)
+
+The performance optimization included:
+
+Preloading critical resources
+Prioritizing the LCP image using fetchpriority="high"
+Using AVIF image formats
+Defining image width and height
+Lazy-loading below-the-fold images
+Using inline SVG icons instead of an external icon library
+Reducing unnecessary external requests
+Optimizing the page structure and assets
+
+Performance Screenshot: 
 ## Deployment
 
 This project is deployed on **Vercel** and connected to the `main` branch. Every push to `main` triggers an automatic production deployment.
