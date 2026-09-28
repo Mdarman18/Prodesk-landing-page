@@ -81,7 +81,7 @@ Performance
 
 Performance was an important part of this project. I tested the deployed website using Google Lighthouse and optimized the page for loading speed, accessibility, best practices, and SEO.
 
-Lighthouse Performance Report :- ![Performanace review page](./image/prodesk.PNG)
+Lighthouse Performance Report :- ![Performanace review page](./image/performance%20prodesk.PNG)
 
 The performance optimization included:
 
